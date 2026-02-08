@@ -38,24 +38,12 @@ body {
   overflow-x: hidden;
 }
 
-#intro {
-  position: fixed;
-  inset: 0;
-  background: url('intro.jpg') center/cover no-repeat;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-#introSlash {
-  font-size: 6rem;
-  color: white;
-  animation: slash 1.2s ease forwards;
-}
+
+
 
 #main {
-  display: none;
+  display: block;
   animation: fadeIn 2s ease forwards;
 }
 
@@ -190,8 +178,7 @@ button {
 </head>
 <body>
 
-<div id="intro">
-  <div id="introSlash">⚔️</div>
+
 </div>
 
 <div id="main">
@@ -277,8 +264,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (noBtn) noBtn.remove();
     seal.style.display = 'block';
 
-    setTimeout(() => {
-  const intro = document.getElementById('intro');
+    
   if (intro) intro.remove();
   document.getElementById('main').style.display = 'block';
 }, 1400);
